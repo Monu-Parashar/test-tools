@@ -11,12 +11,6 @@ window.onresize = function(){
   ww = canv.width = window.innerWidth;
 };onresize();
 
-
-
-
-
-
-
 function canvas(){
   c.clearRect(0,0,ww,wh);
   if(color > 360){color = 0}
