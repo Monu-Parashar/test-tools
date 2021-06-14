@@ -43,8 +43,6 @@ function canvas(){
       c.fillRect(x,y - ( buffHeigth / 2 ) ,-buffWidth/2,buffHeigth);
     };
     
-    
-    
   } else {
     //loading animation --->
     c.beginPath();
@@ -56,8 +54,10 @@ function canvas(){
   }setTimeout(canvas,1000/fps);
 };
 function loadMp3() {
-  canvas();
   let audio = new AudioContext();
+  if (audio) {
+    canvas();
+  };
   source = audio.createBufferSource();
   analyser = audio.createAnalyser();
   source.connect(analyser).connect(audio.destination);
