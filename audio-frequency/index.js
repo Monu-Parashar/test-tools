@@ -76,4 +76,3 @@ function loadMp3() {
 };
 
 window.onload =()=>{loadMp3();}
-alert("hi")
